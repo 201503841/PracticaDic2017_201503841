@@ -1,0 +1,12 @@
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\bin\Debug\Practica1EDiciembre.exe.config
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\obj\Debug\Practica1EDiciembre.csprojResolveAssemblyReference.cache
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\obj\Debug\Practica1EDiciembre.Form1.resources
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\obj\Debug\Practica1EDiciembre.Form2.resources
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\obj\Debug\Practica1EDiciembre.Properties.Resources.resources
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\obj\Debug\Practica1EDiciembre.csproj.GenerateResource.Cache
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\bin\Debug\Practica1EDiciembre.exe
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\bin\Debug\Practica1EDiciembre.pdb
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\bin\Debug\Newtonsoft.Json.dll
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\bin\Debug\Newtonsoft.Json.xml
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\obj\Debug\Practica1EDiciembre.exe
+c:\users\suseth\documents\visual studio 2015\Projects\Practica1EDiciembre\Practica1EDiciembre\obj\Debug\Practica1EDiciembre.pdb
