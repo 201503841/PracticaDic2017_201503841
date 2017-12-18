@@ -68,7 +68,7 @@ namespace Practica1EDiciembre
                     nuevoY.Arriba = NodoDobleTemporal;
                     NodoDobleTemporal = nuevoY;
                     NodoTemporalH = NodoDobleTemporal;
-                    Console.WriteLine("Insertando X: " + Convert.ToString(contadorfila) + ", Y: " + Convert.ToString(contadorcolumna));
+                    Console.WriteLine("Posicion X: " + Convert.ToString(contadorfila) + ", Posicion Y: " + Convert.ToString(contadorcolumna));
                     contadorfila = 1;
                 }
                 else
@@ -115,7 +115,7 @@ namespace Practica1EDiciembre
 
         public void MeterDato(int coordenadax, int coordenaday, int cantidad)
         {
-
+            
             NodoMatrizOrtogonal AuxiliarNodo = NodoCabeza;
 
             int contadorenx = 0;
@@ -126,6 +126,7 @@ namespace Practica1EDiciembre
                 while (contadorenx < coordenadax)
                 {
                     AuxiliarNodo = AuxiliarNodo.Derecha;
+                    
                     contadorenx++;
                 }
                 AuxiliarNodo = AuxiliarNodo.Abajo;
@@ -137,6 +138,38 @@ namespace Practica1EDiciembre
 
         }
 
+        public void recorre(int x,int y)
+        {
+            int coordenaday = y;
+            int coordenadax = x;
+            var Doc = File.Create(@"C:\Users\Suseth\Documents\Visual Studio 2015\Projects\Practica1EDiciembre\Matriz.txt");
+            Doc.Close();
+            StreamWriter escribiendo1 = new StreamWriter(@"C:\Users\Suseth\Documents\Visual Studio 2015\Projects\Practica1EDiciembre\Matriz.txt");
+            escribiendo1.WriteLine("Digraph {");
+
+            NodoMatrizOrtogonal AuxiliarNodo = NodoCabeza;
+
+            int contadorenx = 0;
+            int contadoreny = 0;
+
+            while (contadoreny < coordenaday)
+            {
+                while (contadorenx < coordenadax)
+                {
+                      AuxiliarNodo = AuxiliarNodo.Derecha;
+                    //        Console.WriteLine( " Dato que recorrre " + AuxiliarNodo.Entrada);
+                    escribiendo1.WriteLine("hola");
+
+
+                    contadorenx++;
+                }
+                //    AuxiliarNodo = AuxiliarNodo.Abajo;
+                contadoreny++;
+            }
+                //escribiendo.WriteLine("}");
+                escribiendo1.Close();
+        }
+        
 
         public int ObtenerDato()
         {
@@ -158,9 +191,9 @@ namespace Practica1EDiciembre
             }
             Console.WriteLine(" dato que devuleve: " + dato);
             return dato;
-
-        
+            
 
         }
+        
     }
 }

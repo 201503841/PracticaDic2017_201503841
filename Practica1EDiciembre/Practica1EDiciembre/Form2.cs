@@ -70,21 +70,24 @@ namespace Practica1EDiciembre
                 //Console.WriteLine("Here s is size x " + jPerson.archivo.cola.matrices.matriz.ToString());
 
                 // leer datos de la pila
-                foreach(var num in jPerson.archivo.pila.matrices.matriz)
+                foreach(var datosadentrodematriz in jPerson.archivo.pila.matrices.matriz)
                 {
 
                     MatrizOrtogonal LLMatriz = new MatrizOrtogonal();
 
-                    Console.WriteLine("tamano de matriz de pila: " + num.size_x.ToString() + "-" + num.size_y.ToString()+"\n");
-                    LLMatriz.crearMatriz(Convert.ToInt32(num.size_x), Convert.ToInt32(num.size_y));
-                   
-                    foreach(var val in num.valores.valor)
+                    Console.WriteLine("tamano de matriz de pila: " + datosadentrodematriz.size_x.ToString() + "-" + datosadentrodematriz.size_y.ToString()+"\n");
+                    LLMatriz.crearMatriz(Convert.ToInt32(datosadentrodematriz.size_x), Convert.ToInt32(datosadentrodematriz.size_y));
+
+                    
+                    foreach (var datosdematrizmatriz in datosadentrodematriz.valores.valor)
                     {
-                        Console.Write(" Posicion y valor de matriz pila: " +val.dato.ToString() + "-" + val.pos_x.ToString() + "-" + val.pos_y.ToString() + "\n");
-                        LLMatriz.MeterDato(Convert.ToInt32(val.pos_x),Convert.ToInt32(val.pos_y), Convert.ToInt32(val.dato));
-                     
+                        Console.Write(" Posicion y valor de matriz pila: " +datosdematrizmatriz.dato.ToString() + "-" + datosdematrizmatriz.pos_x.ToString() + "-" + datosdematrizmatriz.pos_y.ToString() + "\n");
+                        LLMatriz.MeterDato(Convert.ToInt32(datosdematrizmatriz.pos_x),Convert.ToInt32(datosdematrizmatriz.pos_y), Convert.ToInt32(datosdematrizmatriz.dato));
+                        
                     }
-                   // LLMatriz.Buscar(Convert.ToInt32(num.size_x), Convert.ToInt32(num.size_y));
+                    //LLMatriz.recorre(Convert.ToInt32(datosadentrodematriz.size_x), Convert.ToInt32(datosadentrodematriz.size_y));
+
+                   // 
                     LLPila.push(LLMatriz);
                     LLMatriz.ObtenerDato();
                    
@@ -93,15 +96,15 @@ namespace Practica1EDiciembre
               //  LLPila.desplegarPila();
 
                 //leer datos de la cola
-                foreach (var num in jPerson.archivo.cola.matrices.matriz)
+                foreach (var primeraseccion in jPerson.archivo.cola.matrices.matriz)
             {
                     MatrizOrtogonal LLMatriz1 = new MatrizOrtogonal();
-                    Console.WriteLine("tamano de matriz de cola: " + num.size_x.ToString() + "-" + num.size_y.ToString() + "\n");
-                    LLMatriz1.crearMatriz(Convert.ToInt32(num.size_x), Convert.ToInt32(num.size_y));
-                foreach (var val in num.valores.valor)
+                    Console.WriteLine("tamano de matriz de cola: " + primeraseccion.size_x.ToString() + "-" + primeraseccion.size_y.ToString() + "\n");
+                    LLMatriz1.crearMatriz(Convert.ToInt32(primeraseccion.size_x), Convert.ToInt32(primeraseccion.size_y));
+                foreach (var segundaseccion in primeraseccion.valores.valor)
                 {
-                    Console.Write(" Posicion y valor de matriz cola: " + val.dato.ToString() + "-" + val.pos_x.ToString() + "-" + val.pos_y.ToString() + "\n");
-                        LLMatriz1.MeterDato(Convert.ToInt32(val.pos_x), Convert.ToInt32(val.pos_y), Convert.ToInt32(val.dato));
+                    Console.Write(" Posicion y valor de matriz cola: " + segundaseccion.dato.ToString() + "-" + segundaseccion.pos_x.ToString() + "-" + segundaseccion.pos_y.ToString() + "\n");
+                        LLMatriz1.MeterDato(Convert.ToInt32(segundaseccion.pos_x), Convert.ToInt32(segundaseccion.pos_y), Convert.ToInt32(segundaseccion.dato));
                 }
                     LLCola.enqueue(LLMatriz1);
                     LLMatriz1.ObtenerDato();
