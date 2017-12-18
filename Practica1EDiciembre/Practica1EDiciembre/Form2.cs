@@ -84,6 +84,7 @@ namespace Practica1EDiciembre
                         LLMatriz.MeterDato(Convert.ToInt32(val.pos_x),Convert.ToInt32(val.pos_y), Convert.ToInt32(val.dato));
                      
                     }
+                   // LLMatriz.Buscar(Convert.ToInt32(num.size_x), Convert.ToInt32(num.size_y));
                     LLPila.push(LLMatriz);
                     LLMatriz.ObtenerDato();
                    
@@ -104,7 +105,7 @@ namespace Practica1EDiciembre
                 }
                     LLCola.enqueue(LLMatriz1);
                     LLMatriz1.ObtenerDato();
-                    LLCola.desplegarCola();
+                   // LLCola.desplegarCola();
 
             }
 
@@ -139,12 +140,17 @@ namespace Practica1EDiciembre
         {
             
             LLPila.desplegarPila();
-            LLPila.graficadoraCola();
+           // LLPila.graficadoraCola();
 
        
             
            
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            LLCola.desplegarCola();
         }
     }
 }

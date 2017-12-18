@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -204,6 +205,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button7);
             this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.button5);
@@ -242,6 +244,16 @@
             this.button6.Text = "Pila";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(306, 381);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(146, 42);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "Cola";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form2
             // 
@@ -283,5 +295,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

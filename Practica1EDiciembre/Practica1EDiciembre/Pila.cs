@@ -75,7 +75,7 @@ namespace Practica1EDiciembre
             var Doc = File.Create(@"C:\Users\Suseth\Documents\Visual Studio 2015\Projects\Practica1EDiciembre\MyCola.txt");
             Doc.Close();
             StreamWriter escribiendo = new StreamWriter(@"C:\Users\Suseth\Documents\Visual Studio 2015\Projects\Practica1EDiciembre\MyCola.txt");
-            escribiendo.WriteLine("Diagraph {");
+            escribiendo.WriteLine("Digraph {");
 
 
           
@@ -85,11 +85,11 @@ namespace Practica1EDiciembre
             if (ultimo != null)
             {
                 // encabezadoPila();
-                while (Actual != null)
+                while (Actual.Siguiente!= null)
                 {
 
                     Console.WriteLine("Dato de la pila: " + Actual.Dato);
-                    escribiendo.WriteLine(Actual.Dato + "->" + Actual.Dato + ";");
+                    escribiendo.WriteLine(Actual.Dato + "->" + Actual.Siguiente.Dato + ";");
                     //string nombrenodo = Actual.Dato.ToString();
 
                     //string escribiendo = nombrenodo + "[label=\"" + Actual.Dato + "\\n"+ "\"];";
@@ -133,38 +133,15 @@ namespace Practica1EDiciembre
         }
 
 
-        public void encabezadoPila()
-        {
-
-           
-
-            
-
-            //try
-            //{
-            //    TextWriter archivo;
-            //    archivo = new StreamWriter ("archivoa.txt");
-            //    string mensaje;
-            //    mensaje = ("Diagraph {");
-            //    archivo.WriteLine(mensaje);
-            //    archivo.Close();
-            //    Console.WriteLine("Archivo creado correrctamente \n");
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine("Exception: " + e.Message);
-            //}
-            //finally
-            //{
-            //    Console.WriteLine("Executing finally block.");
-            //}
-
-        }
-
+        
         public void graficadoraCola()
          {
-           string Comm = "dot -Tpng C:\\Users\\Suseth\\Documents\\Visual Studio 2015\\Projects\\Practica1EDiciembre\\MyCola.txt -o MyCola.png";
-           System.Diagnostics.Process.Start(Comm);
+           // try
+           // {
+           //     System.Diagnostics.Process.Start("C:\\Users\\Suseth\\Documents\\Visual Studio 2015\\Projects\\Practica1EDiciembre\\MyCola.txt")
+           // }
+           //string Comm = "dot -Tpng C:\\Users\\Suseth\\Documents\\Visual Studio 2015\\Projects\\Practica1EDiciembre\\MyCola.txt -o MyCola.png";
+           //System.Diagnostics.Process.Start(Comm);
         }
    }
     

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,13 +73,19 @@ namespace Practica1EDiciembre
         public void desplegarCola()
         {
 
+            var Doc = File.Create(@"C:\Users\Suseth\Documents\Visual Studio 2015\Projects\Practica1EDiciembre\MyPila.txt");
+            Doc.Close();
+            StreamWriter escribiendo = new StreamWriter(@"C:\Users\Suseth\Documents\Visual Studio 2015\Projects\Practica1EDiciembre\MyPila.txt");
+            escribiendo.WriteLine("Digraph {");
+
             NodoCola actualcola = new NodoCola();
             actualcola = primero;
             if (primero != null)
             {
-                while (actualcola != null)
+                while (actualcola.Siguiente!= null)
                 {
                     Console.WriteLine("Datos ingresados a la cola: " + actualcola.Dato);
+                    escribiendo.WriteLine(actualcola.Dato + "->" + actualcola.Siguiente.Dato + ";");
                     actualcola = actualcola.Siguiente;
                 }
             }
@@ -86,7 +93,8 @@ namespace Practica1EDiciembre
             {
                 Console.Write(" La cola esta vacia \n");
             }
-
+            escribiendo.WriteLine("}");
+            escribiendo.Close();
         }
 
     }

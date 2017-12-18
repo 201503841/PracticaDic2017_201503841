@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,7 +53,7 @@ namespace Practica1EDiciembre
                         NodoNuevo.Arriba = NodoTemporalV;
                         NodoTemporalV.Abajo = NodoNuevo;
                     }
-                    Console.WriteLine("Insertando X: " + Convert.ToString(contadorfila) + ", Y: " + Convert.ToString(contadorcolumna));
+                    Console.WriteLine("Posicion X: " + Convert.ToString(contadorfila) + ",Posicion Y: " + Convert.ToString(contadorcolumna));
 
                     contadorfila++;
                 }
@@ -78,8 +79,14 @@ namespace Practica1EDiciembre
             return this;
         }
 
-        public NodoMatrizOrtogonal Buscar(int Fila, int Colummna)
+        public void Buscar(int Fila, int Colummna)
         {
+            var Doc = File.Create(@"C:\Users\Suseth\Documents\Visual Studio 2015\Projects\Practica1EDiciembre\Matriz.txt");
+            Doc.Close();
+            StreamWriter escribiendo = new StreamWriter(@"C:\Users\Suseth\Documents\Visual Studio 2015\Projects\Practica1EDiciembre\Matriz.txt");
+            escribiendo.WriteLine("Digraph {");
+
+
             NodoMatrizOrtogonal AuxiliarenH = NodoCabeza;
             NodoMatrizOrtogonal AuxiliarenV = NodoCabeza;
 
@@ -90,14 +97,20 @@ namespace Practica1EDiciembre
                 {
 
                     AuxiliarenH = AuxiliarenH.Derecha;
+
                     AuxiliarenV = AuxiliarenH;
+                    escribiendo.WriteLine(AuxiliarenH.Entrada + "->" + AuxiliarenV.Entrada) ;
+                    
 
                 }
                 AuxiliarenV = AuxiliarenV.Abajo;
             }
 
 
-            return AuxiliarenV;
+
+            escribiendo.WriteLine("}");
+            escribiendo.Close();
+            
         }
 
         public void MeterDato(int coordenadax, int coordenaday, int cantidad)
